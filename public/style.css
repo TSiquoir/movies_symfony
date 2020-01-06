@@ -1,0 +1,21 @@
+
+.vertical_nav {
+    
+    background-color:#CC3F0C;
+    position: ;
+    height:800px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+body {
+    background-color: #D8CBC7;
+}
+
+.link_action a:hover {
+ background-color: #9A6D38;
+}
+
+.body_card {
+    margin: 0.2em;
+}
