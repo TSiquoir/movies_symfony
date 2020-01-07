@@ -3,26 +3,26 @@
 {% block title %}Hello MoviesController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 1100px; width: 100%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Liste des films</h1>
+    <div class="example-wrapper">
+        <h1>Liste des films</h1>
 
-    <div class="row">
-        {% for movie in movies %}
-            <div class="card border-light mb-3 col-md-3 body_card">
-                <div class="card-header">{{ movie.name }}</div>
-                <div class="card-body">
-                    <img src="{{ movie.cover }}" alt="">
-          
-                    <h5 class="card-title">Light card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="row">
+            {% for movie in movies %}
+                <div class="card border-light mb-3 col-md-3 body_card w-25 p-3">
+                    <div class="card-header">{{ movie.name }}</div>
+                    <div class="card-body">
+                        <img src="{{ movie.cover }}" alt="">
+            
+                        <h5 class="card-title">{{ movie.author.name }}</h5>
+                        {% for key, category in movie.category %}
+                            <span class="card-text">
+                                {{ category.name }}{% if key + 1 < movie.category|length %},{% endif %}
+                            </span>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
 {% endblock %}
