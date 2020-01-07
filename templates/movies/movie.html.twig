@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MoviesController!{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+        <h1><span class="title_movies">Liste des films</span></h1>
+
+        <div class="row">
+            
+                
+                    <div class="card border-light mb-3 col-md-3 body_card w-25 p-3">
+                        <div class="card_header">{{ movie.name }}</div>
+                        <div class="card-body">
+                            <img src="{{ movie.cover }}" alt="Affiche du film" classe="align-items-center">
+                
+                            <h5 class="card-title card_author">{{ movie.author.name }}</h5>
+                            {% for key, category in movie.category %}
+                                <span class="card-text">
+                                    {{ category.name }}{% if key + 1 < movie.category|length %},{% endif %}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                 
+        
+        </div>
+    </div>
+{% endblock %}
