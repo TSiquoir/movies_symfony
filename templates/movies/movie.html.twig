@@ -7,22 +7,43 @@
     <div class="example-wrapper">
         <h1><span class="title_movies">Liste des films</span></h1>
 
-        <div class="row">
-            
-                
-                    <div class="card border-light mb-3 col-md-3 body_card w-25 p-3">
-                        <div class="card_header">{{ movie.name }}</div>
-                        <div class="card-body">
-                            <img src="{{ movie.cover }}" alt="Affiche du film" classe="align-items-center">
-                
-                            <h5 class="card-title card_author">{{ movie.author.name }}</h5>
-                            {% for key, category in movie.category %}
+        <div class="row">    
+            <div class="col-md-8">
+             <div class="card mb-3" style="max-width: 1200px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="{{ movie.cover }}" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ movie.name }}</h5>
+                        <p class="card-text">{{ movie.description }}</p>
+                        <p class="card-text">{{ movie.date }}</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+              <div class="card" style="width: 18rem; height: 10rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="de">De</span> {{ movie.author.name }}</h5>
+                 
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    {% for key, category in movie.category %}
                                 <span class="card-text">
                                     {{ category.name }}{% if key + 1 < movie.category|length %},{% endif %}
                                 </span>
                             {% endfor %}
-                        </div>
-                    </div>
+                  </h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              
                  
         
         </div>

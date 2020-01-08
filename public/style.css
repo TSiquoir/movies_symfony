@@ -1,18 +1,19 @@
 body {
-    background-color: #f1f7ed;
+    background-color: #ffac4d;
     
     background-image: url("https://www.transparenttextures.com/patterns/tactile-noise-dark.png");
 }
 
 
 .vertical_nav-wrap {
-    filter: drop-shadow(4px 4px 2px rgba(8, 8, 8, 0.5));
+    filter: drop-shadow(4px 4px 2px rgba(51, 51, 51, 0.5));
     position: fixed;
 }
 
 .vertical_nav {
     
-    background-color: rgba(7, 13, 15, 0.6);
+    background-color: rgba(173, 1, 53, 0.5);
+
     position: fixed;
     top: 40px;
     left: 40px;
@@ -28,7 +29,7 @@ body {
 }
 
 .link_action a:hover {
- background-color: #F34213;
+ background-color: rgb(243, 81, 36);
 }
 
 .menu_color {
@@ -40,7 +41,7 @@ body {
 }
 
 .title_movies {
-    border-bottom: 2px #F34213 solid;
+    border-bottom: 2px rgb(100, 22, 0) solid;
 }
 
 .card_header {
@@ -59,21 +60,13 @@ body {
     -webkit-box-shadow: 3px 3px 5px 0px rgba(22, 14, 14, 0.39);
 }
 
-.button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #F34213;
-    padding: 0.5rem;
-  }
-
-  .button1 a:hover {
-    background-color: #F34213;
-    color: black;
-    border: 2px solid #F34213;
-    padding: 0.5rem;
-  }
-
 .card_author {
     margin-top: 0.8em;
     font-size: 0.9em;
+}
+
+
+
+.De {
+    color: gray;
 }

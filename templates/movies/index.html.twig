@@ -10,7 +10,9 @@
         <div class="row">
             {% for movie in movies %}
                     <div class="card border-light mb-3 col-md-3 body_card w-25 p-3">            
-                        <div class="card_header">{{ movie.name }}</div>
+                        <div class="card_header">
+                            {{ movie.name }}
+                        </div>
                             <div class="card-body">
                                 <a href="{{ path('movie', {id: movie.id})}}"><img src="{{ movie.cover }}" alt="Affiche du film" classe="align-items-center"></a>
                     
@@ -20,13 +22,8 @@
                                         {{ category.name }}{% if key + 1 < movie.category|length %},{% endif %}
                                     </span>
                                 {% endfor %}
-                            </div>
-                            
-                            <div>
-                                <a class="button1" href="{{ path('movie', {id: movie.id})}}">Détail</a>
-                            </div>
-                        
-                    </div>
+                            </div>              
+                        </div>                    
             {% endfor %}
         </div>
     </div>
